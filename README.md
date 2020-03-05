@@ -8,9 +8,7 @@ After cloning this repo, run:
 
 `sudo ./setup.sh`
 
-The repo will self destruct in 5..4..3..2..1..
-
-Sit back relax and pwn Blue Team now that they can't see connections
+Sit back relax and pwn Blue Team now that they can't see connections or activity
 
 # Script Summary
 This script was built for the GDDC (Great Dane Defense Competition), specifically to be used by the Red Team players.
