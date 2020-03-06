@@ -18,3 +18,6 @@ The idea is to "hide" activity from the Blue Team, this is accomplished by mount
 Processes mounted can no longer be seen with 'ps aux', 'top', etc..
 
 This will also hide from 'w', not showing what tty or pts Red Team is on!
+
+## Blue Team
+Blue Team can begin seeing "NEW" processes again if a team runs the command `umount /tmp`. This will allow them to see processes before the HideRT service runs again. This can be mitigated by removing the temporary command, or disabling the service.
