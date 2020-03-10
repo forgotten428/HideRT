@@ -7,18 +7,6 @@
 #Version 0.30   Andrew - Placed code into functions
 
 ######################################################################
-#Can be set to anywhere, default are two 'hidden' directories.
-check(){
-        DIR=/.empty/.dir
-        if [ ! -d $DIR ]; then #Checks if the directories already exist, if not make them!
-                mkdir -p "$DIR"
-                echo "making $DIR directories"
-        else
-                echo "$DIR already exists"
-        fi
-        nuke
-}
-
 #Just trust the script.. dont worry about how messy it is :D
 #Also.. Don't worry about all of the sleeps and extra echo's I got lazy.
 nuke(){
@@ -36,5 +24,5 @@ nuke(){
 selfDestruct(){
         rm -rf $CURDIR
 }
-check
+nuke
 
