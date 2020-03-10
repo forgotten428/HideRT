@@ -13,7 +13,7 @@
 ######################################################################
 #Builds an array of all users with an ID below 1000
 run(){
-        for USER in `awk -F: '($3 < 1000) {print $1 }' /etc/passwd` ; do
+        for USER in `awk -F: '($3 < 1000) {print $1 }' /etc/passwd | cut -c-7` ; do
                 USERS+=($USER)
         done
         hide
